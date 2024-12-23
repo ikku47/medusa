@@ -247,9 +247,9 @@ export class ShipStationClient {
       ...data,
       headers: {
         ...data?.headers,
-        'api-key': this.options.api_key,
-        "Content-Type": "application/json"
-      }
+        "api-key": this.options.api_key,
+        "Content-Type": "application/json",
+      },
     }).then((resp) => {
       const contentType = resp.headers.get("content-type")
       if (!contentType?.includes("application/json")) {
@@ -416,7 +416,7 @@ class ShipStationProviderService extends AbstractFulfillmentProviderService {
             id: `${carrier.carrier_id}__${service.service_code}`,
             name: service.name,
             carrier_id: carrier.carrier_id,
-            carrier_service_code: service.service_code
+            carrier_service_code: service.service_code,
           })
         })
       })
@@ -606,7 +606,7 @@ export class ShipStationClient {
   ): Promise<GetShippingRatesResponse> {
     return await this.sendRequest("/rates", {
       method: "POST",
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     }).then((resp) => {
       if (resp.rate_response.errors?.length) {
         throw new MedusaError(
@@ -643,7 +643,7 @@ export const serviceHighlights8 = [
 // other imports...
 import {
   // ...
-  MedusaError
+  MedusaError,
 } from "@medusajs/framework/utils"
 import { 
   // ...
@@ -651,7 +651,7 @@ import {
 } from "@medusajs/framework/types"
 import {
   GetShippingRatesResponse,
-  ShipStationAddress
+  ShipStationAddress,
 } from "./types"
 
 class ShipStationProviderService extends AbstractFulfillmentProviderService {
@@ -662,7 +662,7 @@ class ShipStationProviderService extends AbstractFulfillmentProviderService {
     from_address,
     to_address,
     items,
-    currency_code
+    currency_code,
   }: {
     carrier_id: string
     carrier_service_code: string
@@ -692,7 +692,7 @@ class ShipStationProviderService extends AbstractFulfillmentProviderService {
       state_province: from_address?.address?.province || "",
       postal_code: from_address?.address?.postal_code || "",
       country_code: from_address?.address?.country_code || "",
-      address_residential_indicator: "unknown"
+      address_residential_indicator: "unknown",
     }
     if (!to_address) {
       throw new MedusaError(
@@ -709,7 +709,7 @@ class ShipStationProviderService extends AbstractFulfillmentProviderService {
       state_province: to_address.province || "",
       postal_code: to_address.postal_code || "",
       country_code: to_address.country_code || "",
-      address_residential_indicator: "unknown"
+      address_residential_indicator: "unknown",
     }
 
     // TODO create shipment
@@ -748,24 +748,24 @@ return await this.client.getShippingRates({
     items: items?.map((item) => ({
       name: item.title,
       quantity: item.quantity,
-      sku: item.variant_sku || ""
+      sku: item.variant_sku || "",
     })),
     packages: [{
       weight: {
         value: packageWeight,
-        unit: "kilogram"
-      }
+        unit: "kilogram",
+      },
     }],
     customs: {
       contents: "merchandise",
-      non_delivery: "return_to_sender"
-    }
+      non_delivery: "return_to_sender",
+    },
   },
   rate_options: {
     carrier_ids: [carrier_id],
     service_codes: [carrier_service_code],
     preferred_currency: currency_code as string,
-  }
+  },
 })
 ```
 
@@ -816,11 +816,11 @@ class ShipStationProviderService extends AbstractFulfillmentProviderService {
         carrier_service_code,
         from_address: {
           name: context.from_location?.name,
-          address: context.from_location?.address
+          address: context.from_location?.address,
         },
         to_address: context.shipping_address,
         items: context.items || [],
-        currency_code: context.currency_code
+        currency_code: context.currency_code,
       })
       rate = shipment.rate_response.rates[0]
     } else {
@@ -834,7 +834,7 @@ class ShipStationProviderService extends AbstractFulfillmentProviderService {
 
     return {
       calculated_amount: calculatedPrice,
-      is_calculated_price_tax_inclusive: !!rate?.tax_amount
+      is_calculated_price_tax_inclusive: !!rate?.tax_amount,
     }
   }
 }
@@ -901,21 +901,21 @@ class ShipStationProviderService extends AbstractFulfillmentProviderService {
           // @ts-ignore
           name: context.from_location?.name,
           // @ts-ignore
-          address: context.from_location?.address
+          address: context.from_location?.address,
         },
         // @ts-ignore
         to_address: context.shipping_address,
         // @ts-ignore
         items: context.items || [],
         // @ts-ignore
-        currency_code: context.currency_code
+        currency_code: context.currency_code,
       })
       shipment_id = shipment.shipment_id
     }
 
     return {
       ...data,
-      shipment_id
+      shipment_id,
     }
   }
 }
@@ -994,7 +994,7 @@ export class ShipStationClient {
   async purchaseLabelForShipment(id: string): Promise<Label> {
     return await this.sendRequest(`/labels/shipment/${id}`, {
       method: "POST",
-      body: JSON.stringify({})
+      body: JSON.stringify({}),
     })
   }
 }
@@ -1043,7 +1043,7 @@ class ShipStationProviderService extends AbstractFulfillmentProviderService {
       orderItemsToFulfill.push({
         ...orderItem,
         // @ts-ignore
-        quantity: item.quantity
+        quantity: item.quantity,
       })
     })
 
@@ -1057,7 +1057,7 @@ class ShipStationProviderService extends AbstractFulfillmentProviderService {
           address_1: originalShipment.ship_from.address_line1,
           city: originalShipment.ship_from.city_locality,
           province: originalShipment.ship_from.state_province,
-        }
+        },
       },
       to_address: {
         ...originalShipment.ship_to,
@@ -1067,7 +1067,7 @@ class ShipStationProviderService extends AbstractFulfillmentProviderService {
       },
       items: orderItemsToFulfill as OrderLineItemDTO[],
       // @ts-ignore
-      currency_code: order.currency_code
+      currency_code: order.currency_code,
     })
 
     const label = await this.client.purchaseLabelForShipment(newShipment.shipment_id)
@@ -1076,7 +1076,7 @@ class ShipStationProviderService extends AbstractFulfillmentProviderService {
       data: {
         ...(fulfillment.data as object || {}),
         label_id: label.label_id,
-        shipment_id: label.shipment_id
+        shipment_id: label.shipment_id,
       },
     }
   }
@@ -1228,7 +1228,7 @@ module.exports = defineConfig({
             resolve: "./src/modules/shipstation",
             id: "shipstation",
             options: {
-              api_key: process.env.SHIPSTATION_API_KEY
+              api_key: process.env.SHIPSTATION_API_KEY,
             },
           },
         ],
