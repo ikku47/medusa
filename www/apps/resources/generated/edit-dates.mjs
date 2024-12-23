@@ -3384,7 +3384,7 @@ export const generatedEditDates = {
   "references/types/DmlTypes/types/types.DmlTypes.InferForeignKeys/page.mdx": "2024-12-23T12:30:28.159Z",
   "references/types/DmlTypes/types/types.DmlTypes.InferSchemaFields/page.mdx": "2024-12-10T14:54:55.447Z",
   "references/types/interfaces/types.BaseRepositoryService/page.mdx": "2024-12-09T13:21:32.969Z",
-  "app/events-reference/page.mdx": "2024-11-27T13:31:07.385Z",
+  "app/events-reference/page.mdx": "2024-12-23T16:30:48.569Z",
   "references/auth_models/variables/auth_models.AuthIdentity/page.mdx": "2024-12-23T13:57:08.092Z",
   "references/auth_models/variables/auth_models.ProviderIdentity/page.mdx": "2024-12-23T13:57:08.094Z",
   "references/dml/entity/DmlEntity/methods/dml.entity.DmlEntity.checks/page.mdx": "2024-12-09T13:21:55.464Z",
@@ -5756,5 +5756,13 @@ export const generatedEditDates = {
   "references/core_flows/core_flows.Tax/page.mdx": "2024-12-23T12:30:26.503Z",
   "references/core_flows/core_flows.User/page.mdx": "2024-12-23T12:30:26.564Z",
   "references/order/types/order.ReturnStatus/page.mdx": "2024-12-23T12:30:30.107Z",
-  "references/fulfillment_models/types/fulfillment_models.ServiceZoneSchema/page.mdx": "2024-12-23T12:30:32.004Z"
+  "references/fulfillment_models/types/fulfillment_models.ServiceZoneSchema/page.mdx": "2024-12-23T12:30:32.004Z",
+  "app/commerce-modules/auth/events/page.mdx": "2024-12-23T16:16:08.118Z",
+  "app/commerce-modules/cart/events/page.mdx": "2024-12-23T16:16:47.466Z",
+  "app/commerce-modules/customer/events/page.mdx": "2024-12-23T16:17:25.414Z",
+  "app/commerce-modules/order/events/page.mdx": "2024-12-23T16:19:41.929Z",
+  "app/commerce-modules/product/events/page.mdx": "2024-12-23T16:25:05.789Z",
+  "app/commerce-modules/region/events/page.mdx": "2024-12-23T16:26:13.661Z",
+  "app/commerce-modules/sales-channel/events/page.mdx": "2024-12-23T16:27:10.675Z",
+  "app/commerce-modules/user/events/page.mdx": "2024-12-23T16:28:41.193Z"
 }

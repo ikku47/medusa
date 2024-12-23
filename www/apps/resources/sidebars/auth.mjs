@@ -94,6 +94,11 @@ export const authSidebar = [
         children: [
           {
             type: "link",
+            path: "/commerce-modules/auth/events",
+            title: "Events Reference",
+          },
+          {
+            type: "link",
             path: "/references/auth",
             title: "Main Service Reference",
             isChildSidebar: true,

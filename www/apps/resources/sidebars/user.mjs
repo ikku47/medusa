@@ -37,6 +37,11 @@ export const userSidebar = [
         children: [
           {
             type: "link",
+            path: "/commerce-modules/user/events",
+            title: "Events Reference",
+          },
+          {
+            type: "link",
             path: "/references/user",
             title: "Main Service Reference",
             isChildSidebar: true,

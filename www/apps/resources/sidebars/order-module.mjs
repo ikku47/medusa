@@ -77,6 +77,11 @@ export const orderSidebar = [
         children: [
           {
             type: "link",
+            path: "/commerce-modules/order/events",
+            title: "Events Reference",
+          },
+          {
+            type: "link",
             path: "/references/order",
             title: "Main Service Reference",
             isChildSidebar: true,

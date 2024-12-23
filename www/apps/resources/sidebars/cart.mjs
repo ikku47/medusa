@@ -52,6 +52,11 @@ export const cartSidebar = [
         children: [
           {
             type: "link",
+            path: "/commerce-modules/cart/events",
+            title: "Events Reference",
+          },
+          {
+            type: "link",
             path: "/references/cart",
             title: "Main Service Reference",
             isChildSidebar: true,

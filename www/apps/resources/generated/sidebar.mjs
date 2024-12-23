@@ -500,6 +500,14 @@ export const generatedSidebar = [
                 "loaded": true,
                 "isPathHref": true,
                 "type": "link",
+                "path": "/commerce-modules/auth/events",
+                "title": "Events Reference",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
                 "path": "/references/auth",
                 "title": "Main Service Reference",
                 "isChildSidebar": true,
@@ -753,6 +761,14 @@ export const generatedSidebar = [
             "type": "sub-category",
             "title": "References",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/cart/events",
+                "title": "Events Reference",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -1427,6 +1443,14 @@ export const generatedSidebar = [
             "type": "sub-category",
             "title": "References",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/customer/events",
+                "title": "Events Reference",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -3015,6 +3039,14 @@ export const generatedSidebar = [
             "type": "sub-category",
             "title": "References",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/order/events",
+                "title": "Events Reference",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -5393,6 +5425,14 @@ export const generatedSidebar = [
                 "loaded": true,
                 "isPathHref": true,
                 "type": "link",
+                "path": "/commerce-modules/product/events",
+                "title": "Events Reference",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
                 "path": "/references/product",
                 "title": "Main Service Reference",
                 "isChildSidebar": true,
@@ -6526,6 +6566,14 @@ export const generatedSidebar = [
                 "loaded": true,
                 "isPathHref": true,
                 "type": "link",
+                "path": "/commerce-modules/region/events",
+                "title": "Events Reference",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
                 "path": "/references/region",
                 "title": "Main Service Reference",
                 "isChildSidebar": true,
@@ -6731,6 +6779,14 @@ export const generatedSidebar = [
             "type": "sub-category",
             "title": "References",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/sales-channel/events",
+                "title": "Events Reference",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -7583,6 +7639,14 @@ export const generatedSidebar = [
             "type": "sub-category",
             "title": "References",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/user/events",
+                "title": "Events Reference",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
