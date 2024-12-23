@@ -1,5 +1,12 @@
 # @medusajs/utils
 
+## 2.1.4
+
+### Patch Changes
+
+- Updated dependencies [[`13ddf27c68fc2831b3661940bc5f27bab23ce8c0`](https://github.com/medusajs/medusa/commit/13ddf27c68fc2831b3661940bc5f27bab23ce8c0), [`0559d54c18d2e79c78c2b9a348b9873d1a786dea`](https://github.com/medusajs/medusa/commit/0559d54c18d2e79c78c2b9a348b9873d1a786dea)]:
+  - @medusajs/types@2.1.4
+
 ## 2.1.3
 
 ### Patch Changes
